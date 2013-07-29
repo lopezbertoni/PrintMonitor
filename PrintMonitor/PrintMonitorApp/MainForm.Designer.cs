@@ -30,6 +30,8 @@
         {
             this.ddlPrinters = new System.Windows.Forms.ComboBox();
             this.btnLoadPrinters = new System.Windows.Forms.Button();
+            this.txtStatus = new System.Windows.Forms.TextBox();
+            this.btnLoadQueues = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ddlPrinters
@@ -51,17 +53,38 @@
             this.btnLoadPrinters.UseVisualStyleBackColor = true;
             this.btnLoadPrinters.Click += new System.EventHandler(this.btnLoadPrinters_Click);
             // 
+            // txtStatus
+            // 
+            this.txtStatus.Location = new System.Drawing.Point(13, 50);
+            this.txtStatus.Multiline = true;
+            this.txtStatus.Name = "txtStatus";
+            this.txtStatus.Size = new System.Drawing.Size(200, 200);
+            this.txtStatus.TabIndex = 2;
+            // 
+            // btnLoadQueues
+            // 
+            this.btnLoadQueues.Location = new System.Drawing.Point(219, 51);
+            this.btnLoadQueues.Name = "btnLoadQueues";
+            this.btnLoadQueues.Size = new System.Drawing.Size(150, 23);
+            this.btnLoadQueues.TabIndex = 3;
+            this.btnLoadQueues.Text = "Load Queues";
+            this.btnLoadQueues.UseVisualStyleBackColor = true;
+            this.btnLoadQueues.Click += new System.EventHandler(this.btnLoadQueues_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 262);
+            this.Controls.Add(this.btnLoadQueues);
+            this.Controls.Add(this.txtStatus);
             this.Controls.Add(this.btnLoadPrinters);
             this.Controls.Add(this.ddlPrinters);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main Form";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -69,6 +92,8 @@
 
         private System.Windows.Forms.ComboBox ddlPrinters;
         private System.Windows.Forms.Button btnLoadPrinters;
+        private System.Windows.Forms.TextBox txtStatus;
+        private System.Windows.Forms.Button btnLoadQueues;
     }
 }
 
